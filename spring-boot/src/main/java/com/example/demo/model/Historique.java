@@ -17,7 +17,7 @@ public class Historique {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    Long idhistorique;
 
     @Column(name = "idenchere")
     Long idenchere;
