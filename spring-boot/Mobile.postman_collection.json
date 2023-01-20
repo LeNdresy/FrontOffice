@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "a839de11-3ce4-436f-b72c-c34d45ed8181",
+		"name": "Mobile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Inscription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomclient\": \"Bob\",\r\n    \"telephone\": \"039001100105\",\r\n    \"idgenre\":\"1\",\r\n    \"motdepasse\": \"bob123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "client/inscrire",
+					"host": [
+						"client"
+					],
+					"path": [
+						"inscrire"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"telephone\": \"033001100102\",\r\n    \"motdepasse\": \"elsysoavita123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/client/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AjouterEnchère",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idclient\":\"3\",\r\n    \"idcategorie\":\"4\",\r\n    \"nomproduit\":\"Carburateur\",\r\n    \"dateheuredebut\":\"2023-01-20 09:00:00\",\r\n    \"dateheurefin\":\"2023-01-20 10:00:00\",\r\n    \"prixdepart\":\"200000\",\r\n    \"idetat\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/enchere/ajouter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"enchere",
+						"ajouter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RechargerCompte",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"idclient\":\"1\",\r\n    \"password\":\"123\",\r\n    \"solde\":\"30000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/compte/recharger",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compte",
+						"recharger"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListeEnchère",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/encheres/etats/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"encheres",
+						"etats",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

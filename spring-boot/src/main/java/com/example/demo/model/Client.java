@@ -19,7 +19,7 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @Column(name = "nomclient")
+    @Column(name = "nom")
     String nomclient;
 
     @Column(name = "telephone")
@@ -28,7 +28,7 @@ public class Client {
     @Column(name = "idgenre")
     Long idgenre;
 
-    @Column(name = "motdepasse")
+    @Column(name = "password")
     String motdepasse;
 
 }

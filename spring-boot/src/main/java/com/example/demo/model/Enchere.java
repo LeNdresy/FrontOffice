@@ -19,6 +19,7 @@ public class Enchere {
    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "idenchere")
     Long id;
 
     @Column(name = "idclient")
